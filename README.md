@@ -1,5 +1,16 @@
 # rocketseat-origin
 
+## Parte 1
+
+### Tecnologias
+
+- HTML
+- CSS
+
+### Fragmentos de código
+
+- Variáveis CSS
+
 ### Extensões Visual Studio Code
 
 - Bracket Pair Colorizer
