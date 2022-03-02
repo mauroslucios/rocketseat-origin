@@ -8,6 +8,9 @@
 /*=============== VARIABLES ===============*/
 
 :root {
+  --header-heigth: 4.5rem;
+
+  /*colors*/
   --hue: 159;
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
@@ -34,7 +37,30 @@ h1 {
 }
 
 .button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.3s;
 }
+
+.button:hover {
+  background-color: var(--base-color-alt);
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
+}
+
 a {
   text-decoration: none;
 }
@@ -48,15 +74,21 @@ img {
 
 #header {
   border-bottom: 1px solid #e4e4e4;
-  margin-bottom: 5rem;
   display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
 }
 
 nav {
+  height: var(--header-heigth);
   display: flex;
-  justify-content: space-between;
-  height: 4.5rem;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
@@ -68,8 +100,11 @@ nav {
   color: var(--base-color);
 }
 
+main {
+  margin-top: var(--header-heigth);
+}
+
 .container {
-  width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -84,6 +119,9 @@ nav {
 }
 
 /*=============== HOME ===============*/
+#home {
+  overflow: hidden;
+}
 
 #home .container {
   margin: 0;
@@ -99,9 +137,10 @@ nav {
   width: 100%;
   background-color: var(--base-color-second);
   position: absolute;
-  top: -16.8%;
+  top: -5.8%;
   left: 16.7%;
   z-index: 0;
+  border-radius: 0.25rem;
 }
 
 #home .image img {
